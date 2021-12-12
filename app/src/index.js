@@ -14,7 +14,8 @@ app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
 
 app.use(morgan('common'));
-app.use(servefavicon('./app/public/images/favicon.ico'));
+/* eslint-disable-next-line no-undef */
+app.use(servefavicon(path.join(__dirname, '../public/images/favicon.ico')));
 app.use(require('./routes'));
 /* eslint-disable-next-line no-undef */
 app.use(express.static(path.join(__dirname, '../public')));
